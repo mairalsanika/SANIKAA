@@ -2,22 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Personal Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Placement Portal</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f4f4f9; }
-        .card { border: 1px solid #ccc; padding: 25px; border-radius: 10px; max-width: 500px; background: white; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        h1 { color: #333; }
-        p { margin: 8px 0; font-size: 16px; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f7f6; color: #333; }
+        header { background: #004080; color: #fff; padding: 1.5rem; text-align: center; }
+        .container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
+        .card { background: #fff; padding: 1.5rem; margin-bottom: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        h2 { color: #004080; border-bottom: 2px solid #004080; padding-bottom: 0.5rem; }
+        table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+        th, td { padding: 12px; border: 1px solid #ddd; text-align: left; }
+        th { background-color: #004080; color: white; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem; }
+        .stat-box { background: #e6f0fa; padding: 1rem; text-align: center; border-radius: 6px; font-weight: bold; }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1>Personal Profile</h1>
-        <p><strong>Name:</strong> Saathwik</p>
-        <p><strong>Register Number:</strong> 21BCE0000</p>
-        <p><strong>Department:</strong> Computer Science & Engineering</p>
-        <p><strong>Skills:</strong> Docker, Kubernetes, Git, HTML/CSS</p>
-        <p><strong>Career Objective:</strong> Aspiring DevOps Engineer focusing on containerized deployments and continuous integration.</p>
+    <header>
+        <h1>University Student Placement Portal</h1>
+        <p>Connecting Talent with Top Employers | Version: v1.0.0</p>
+    </header>
+    <div class="container">
+        <div class="card">
+            <h2>Placement Statistics (2025-2026)</h2>
+            <div class="stats-grid">
+                <div class="stat-box">Total Placed: 1,240</div>
+                <div class="stat-box">Placement Rate: 94.5%</div>
+                <div class="stat-box">Highest Package: $48 LPA</div>
+                <div class="stat-box">Average Package: $12.5 LPA</div>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Upcoming Recruitment Drives</h2>
+            <table>
+                <tr><th>Company</th><th>Role</th><th>Package</th><th>Eligibility</th><th>Date</th></tr>
+                <tr><td>TechCorp</td><td>Software Engineer</td><td>$15 LPA</td><td>CGPA >= 7.5</td><td>Oct 25, 2026</td></tr>
+                <tr><td>DataScale</td><td>Data Analyst</td><td>$12 LPA</td><td>CGPA >= 7.0</td><td>Nov 02, 2026</td></tr>
+                <tr><td>CloudScale</td><td>DevOps Intern</td><td>$10 LPA</td><td>CGPA >= 6.8</td><td>Nov 10, 2026</td></tr>
+            </table>
+        </div>
     </div>
 </body>
 </html>
