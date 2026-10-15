@@ -37,11 +37,8 @@ pipeline {
             steps {
                 echo 'Pushing Docker image to Docker Hub...'
                 script {
-                    withCredentials([usernamePassword(credentialsId: "${env.DOCKER_CREDENTIALS_ID}", usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
-                        powershell '''
-                            $password = $env:DOCKER_PASS.Trim()
-                            $password | & "${env:DOCKER_BIN}" login --username "$env:DOCKER_USER" --password-stdin
-                        '''
+                    // Use Jenkins native docker plugin registry helper with absolute path injected
+                    docker.withRegistry('https://index.docker.io/v1/', "${env.DOCKER_CREDENTIALS_ID}") {
                         bat "\"${env.DOCKER_BIN}\" push ${env.DOCKER_IMAGE}:${env.BUILD_NUMBER}"
                         bat "\"${env.DOCKER_BIN}\" push ${env.DOCKER_IMAGE}:latest"
                     }
